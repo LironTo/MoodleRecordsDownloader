@@ -111,7 +111,8 @@ class BGUTubeApp:
         self.course_vars.clear()
         self.select_all_chk.pack_forget()
         self.show_selected_btn.pack_forget()
-        self.show_selected_btn.config(state=DISABLED)
+        self.select_all_var.set(0)
+        print("[DEBUG] clean_up called, disabling show_selected_btn")
 
     def on_login(self):
         global USERNAME, PASSWORD
