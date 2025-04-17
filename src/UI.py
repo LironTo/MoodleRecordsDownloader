@@ -9,8 +9,9 @@ def download_videos():
 root = tk.Tk()
 root.title("BGU Tube")
 
-if os.path.exists("Media/Logo.png"):
-    logo = tk.PhotoImage(file="Media/Logo.png")
+if os.path.exists("../Media/Logo.png"):
+    logo = tk.PhotoImage(file="../Media/Logo.png")
+    logo = logo.subsample(4, 4)  # Reduce size by half
 else:
     print("Error: Logo file not found. Using a placeholder.")
     logo = None
